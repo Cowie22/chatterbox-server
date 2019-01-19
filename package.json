@@ -29,5 +29,8 @@
     "presets": [
       "es2015"
     ]
+  },
+  "dependencies": {
+    "url": "^0.11.0"
   }
 }
