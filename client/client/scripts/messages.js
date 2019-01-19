@@ -1,6 +1,5 @@
 var Messages = {
 
-
   _data: {},
 
   items: function() {

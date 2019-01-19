@@ -4,13 +4,11 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
-
     RoomsView.$select.on('change', RoomsView.handleChange);
     RoomsView.$button.on('click', RoomsView.handleClick);
-      },
+  },
 
   render: function() {
-
     RoomsView.$select.html('');
     Rooms
       .items()
@@ -36,6 +34,6 @@ var RoomsView = {
         MessagesView.render();
       });
     }
-      }
+  }
 
 };

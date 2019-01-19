@@ -113,7 +113,7 @@ var requestHandler = function(request, response) {
         var message = createMessage(input);
         data.results.push(message);
         response.writeHead(statusCode, headers);
-        response.end(JSON.stringify(data));
+        response.end(JSON.stringify(message));
       });
     }
     if (request.method === 'OPTIONS') {

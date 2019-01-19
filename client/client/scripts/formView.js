@@ -9,8 +9,7 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    
-
+  
     var message = {
       username: App.username,
       text: FormView.$form.find('#message').val(),
@@ -18,10 +17,11 @@ var FormView = {
     };
 
     Parse.create(message, (data) => {
+      data = JSON.parse(data);
       _.extend(message, data);
       Messages.add(message, MessagesView.render);
     });
-      },
+  },
 
   setStatus: function(active) {
     var status = active ? 'true' : null;

@@ -3,7 +3,6 @@ var Parse = {
   server: 'http://127.0.0.1:3000/classes/messages',
 
   create: function(message, successCB, errorCB = null) {
-
     $.ajax({
       url: Parse.server,
       type: 'POST',
@@ -14,7 +13,7 @@ var Parse = {
         console.error('chatterbox: Failed to create message', error);
       }
     });
-      },
+  },
 
   readAll: function(successCB, errorCB = null) {
     $.ajax({
